@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="Maven" xmlns="http://maven.apache.org/DECORATION/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+    <bannerLeft>
+        <name>TIBCO Maven plugin</name>
+        <src>images/logo.jpg</src>
+        <href>http://syntouch.nl</href>
+    </bannerLeft>
+
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.2.1</version>
+    </skin>
+    <custom>
+        <fluidoSkin>
+            <sideBarEnabled>true</sideBarEnabled>
+            <googlePlusOne />
+        </fluidoSkin>
+    </custom>
+
+
+    <body>
+        <links>
+            <item name="About SynTouch" href="http://syntouch.nl"/>
+        </links>
+        <menu name="Project Documentation">
+            <item name="Project Information" href="project-info.html"/>
+            <item name="Project Summary" href="project-summary.html" />
+            <item name="Dependency Information" href="dependency-info.html" />
+            <item name="Dependencies" href="dependencies.html" />
+        </menu>
+    </body>
+</project>

@@ -1,0 +1,34 @@
+<component-set>
+    <components>
+        <component>
+            <role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+            <role-hint>ear</role-hint>
+            <implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+            </implementation>
+            <configuration>
+                <phases>
+                    <initialize>nl.syntouch.maven.plugins:tibco-packaging-maven-plugin:init</initialize>
+                    <prepare-package>nl.syntouch.maven.plugins:tibco-packaging-maven-plugin:validate</prepare-package>
+                    <package>nl.syntouch.maven.plugins:tibco-packaging-maven-plugin:ear</package>
+                    <install>org.apache.maven.plugins:maven-install-plugin:2.3.1:install</install>
+                    <deploy>org.apache.maven.plugins:maven-deploy-plugin:2.3.1:deploy</deploy>
+                </phases>
+            </configuration>
+        </component>
+        <component>
+            <role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+            <role-hint>projlib</role-hint>
+            <implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping
+            </implementation>
+            <configuration>
+                <phases>
+                    <initialize>nl.syntouch.maven.plugins:tibco-packaging-maven-plugin:init</initialize>
+                    <prepare-package>nl.syntouch.maven.plugins:tibco-packaging-maven-plugin:validate</prepare-package>
+                    <package>nl.syntouch.maven.plugins:tibco-packaging-maven-plugin:library</package>
+                    <install>org.apache.maven.plugins:maven-install-plugin:2.3.1:install</install>
+                    <deploy>org.apache.maven.plugins:maven-deploy-plugin:2.3.1:deploy</deploy>
+                </phases>
+            </configuration>
+        </component>
+    </components>
+</component-set>

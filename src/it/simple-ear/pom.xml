@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>nl.syntouch.it</groupId>
+    <artifactId>simple-ear</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>ear</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>nl.syntouch.maven.plugins</groupId>
+                <artifactId>tibco-packaging-maven-plugin</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <projectDirectory>${project.basedir}/src/bw/sample-project</projectDirectory>
+                    <archive>sample-project.archive</archive>
+                    <validate>false</validate>
+                    <lib/>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>nl.syntouch.it</groupId>
+            <artifactId>simple-projlib</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>projlib</type>
+        </dependency>
+    </dependencies>
+</project>
